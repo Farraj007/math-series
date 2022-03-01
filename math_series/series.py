@@ -14,10 +14,12 @@ def fibonacci(n):
 
     """
 
-    if n == 0 | n ==1:
-        return
+    if n == 0 :
+        return 0
+    elif n == 1 :
+        return 1    
     else:
-        return fibonacci(n-1) + fibonacci(n-2)
+        return fibonacci(n - 1) + fibonacci(n - 2)
     
 
 def lucas(n):
@@ -29,21 +31,24 @@ def lucas(n):
     """
     if n == 0:
         return 2
-    elif n==1:
-        return    
+    elif n == 1:
+        return 1   
     else:
         return lucas(n-1) + lucas(n-2)
 
-def sum_series(n, default1=0, default2=1):
+def sum_series(n, default1 = 0, default2 = 1):
 
     """
+    This function takes one required argument(n)and programmed to have two optional arguments with values 0 and 1 this will return a fibonacci series as default.
+    if the two other arguments changed will produce a new series or the lucas numbers with the two optional values 2 and 1
 
     """
     if n == 0:
         return default1
-    elif n == 0:
-        return default1
+    elif n == 1:
+        return default2
     else:
-        return sum_series
+        return sum_series(n-1, default1=default1, default2=default2) + sum_series( n-2, default1=default1, default2=default2)
 
-    pass
+#print (sum_series(5 ,default1 = 1 ,default2 = 5)) calculating values of the new series
+
