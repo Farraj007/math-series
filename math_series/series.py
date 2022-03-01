@@ -34,8 +34,16 @@ def lucas(n):
     else:
         return lucas(n-1) + lucas(n-2)
 
-def sum(n, default1=0, default2=1):
+def sum_series(n, default1=0, default2=1):
+
     """
-    
+
     """
+    if n == 0:
+        return default1
+    elif n == 0:
+        return default1
+    else:
+        return sum_series
+
     pass
